@@ -20,6 +20,9 @@ android {
 }
 
 dependencies {
+//added the following line to link to YOUTUBE API//
+    compile files('libs/YouTubeAndroidPlayerApi.jar')
+
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
