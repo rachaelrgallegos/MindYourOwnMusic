@@ -3,8 +3,9 @@
     package="com.example.rachael.mindyourownmusic">
 
 <!-- Added the line below to allow music to play while phone screen has timed out -->
-
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Added the line below to allow access to internet for YOUTUBE API -->
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"

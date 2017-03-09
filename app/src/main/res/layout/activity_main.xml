@@ -10,8 +10,16 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.rachael.mindyourownmusic.MainActivity">
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!" />
+
+    <!--added the following block of code for the YOUTUBE Player View -->
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/youtube_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 </RelativeLayout>
