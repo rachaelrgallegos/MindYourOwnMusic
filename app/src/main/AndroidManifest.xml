@@ -2,10 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.rachael.mindyourownmusic">
 
-<!-- Added the line below to allow music to play while phone screen has timed out -->
+    <!-- Added the line below to allow music to play while phone screen has timed out -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <!-- Added the line below to allow access to internet for YOUTUBE API -->
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -13,12 +13,24 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
+                <!-- enable the search dialog to send searches to SearchableActivity -->
+                <meta-data android:name="android.app.default_searchable"
+                    android:value=".SearchActivity" />
+
             </intent-filter>
+        </activity>
+        <activity android:name=".SearchActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"></action>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
         </activity>
     </application>
 
